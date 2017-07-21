@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get :most_comments
       get :search
+      get :random
     end
     resources :comments
   end

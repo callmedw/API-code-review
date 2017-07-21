@@ -10,6 +10,10 @@ class Creature < ApplicationRecord
     .limit(5)
     )}
 
+    def self.random
+      Creature.offset(rand(Creature.count)).first
+    end
+
     def self.search(input)
       self.find_by(kind: input)
     end

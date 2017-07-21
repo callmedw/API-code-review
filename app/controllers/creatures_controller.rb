@@ -43,6 +43,11 @@ class CreaturesController < ApplicationController
     json_response(@creatures)
   end
 
+  def random
+    @creatures = Creature.random
+    json_response(@creatures)
+  end
+
   private
   def creature_params
     params.permit(:name, :age, :gender, :coloring, :kind)

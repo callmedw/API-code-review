@@ -23,6 +23,9 @@ comments
   creature_id
 
 API Endpoints
+
+search by kind Localhost:3000/creatures/search?kind=conspirators
+
 creature_comments GET    /creatures/:creature_id/comments
                   POST   /creatures/:creature_id/comments
  creature_comment GET    /creatures/:creature_id/comments/:id
