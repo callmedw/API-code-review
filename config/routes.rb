@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :creatures do
     collection do
       get :most_comments
+      get :search
     end
     resources :comments
   end

@@ -37,6 +37,12 @@ class CreaturesController < ApplicationController
     json_response(@creatures)
   end
 
+  def search
+    kind = params[:kind]
+    @creatures = Creature.search(kind)
+    json_response(@creatures)
+  end
+
   private
   def creature_params
     params.permit(:name, :age, :gender, :coloring, :kind)

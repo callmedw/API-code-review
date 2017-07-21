@@ -1,9 +1,6 @@
 
   A RANDOM endpoint that randomly returns a park/business/animal.
 
-
-  Model scopes should be used to process parameters from API calls.
-
   At least one of the objectives from Monday's Further Exploration lesson (such as versioning, token authentication, or serialization).
 
   Thorough exception handling.

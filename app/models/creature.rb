@@ -9,4 +9,8 @@ class Creature < ApplicationRecord
     .order("comments_count DESC")
     .limit(5)
     )}
+
+    def self.search(input)
+      self.find_by(kind: input)
+    end
 end
