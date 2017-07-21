@@ -22,16 +22,15 @@ comments
   creature_id
 
 
-
-creatures   GET     /creatures
-            POST    /creatures
-creature    GET     /creatures/:id
-            PATCH   /creatures/:id
-            PUT     /creatures/:id
-            DELETE  /creatures/:id
-comments    GET     /comments
-            POST    /comments
-comment     GET     /comments/:id
-            PATCH   /comments/:id
-            PUT     /comments/:id
-            DELETE  /comments/:id
+creature_comments GET    /creatures/:creature_id/comments
+                  POST   /creatures/:creature_id/comments
+ creature_comment GET    /creatures/:creature_id/comments/:id
+                  PATCH  /creatures/:creature_id/comments/:id
+                  PUT    /creatures/:creature_id/comments/:id
+                  DELETE /creatures/:creature_id/comments/:id
+        creatures GET    /creatures
+                  POST   /creatures
+         creature GET    /creatures/:id
+                  PATCH  /creatures/:id
+                  PUT    /creatures/:id
+                  DELETE /creatures/:id
