@@ -21,7 +21,7 @@ comments
   comment
   creature_id
 
-
+API Endpoints
 creature_comments GET    /creatures/:creature_id/comments
                   POST   /creatures/:creature_id/comments
  creature_comment GET    /creatures/:creature_id/comments/:id
