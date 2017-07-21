@@ -11,13 +11,20 @@ class CreaturesController < ApplicationController
   end
 
   def create
-    @creature = Creature.create(creature_params)
-    json_response(@creature)
+    if @creature = Creature.create!(creature_params)
+      render status: 200, json: {
+       message: "Your creature has been added!"
+       }
+    end
   end
 
   def update
     @creature = Creature.find(params[:id])
-    @creature.update(creature_params)
+    if @creature.update!(creature_params)
+      render status: 200, json: {
+       message: "Your creature has been updated!"
+       }
+    end
   end
 
   def destroy

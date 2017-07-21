@@ -13,7 +13,7 @@ creature
   name
   age
   gender
-  colorings
+  coloring
   kind
 
 comments
