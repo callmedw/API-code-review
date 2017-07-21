@@ -32,6 +32,11 @@ class CreaturesController < ApplicationController
     @creature.destroy
   end
 
+  def most_comments
+    @creatures = Creature.most_comments
+    json_response(@creatures)
+  end
+
   private
   def creature_params
     params.permit(:name, :age, :gender, :coloring, :kind)

@@ -20,7 +20,11 @@ class CommentsController < ApplicationController
 
   def update
     @comment = Comment.find(params[:id])
-    @comment.update!(comment_params)
+    if @comment.update!(comment_params)
+      render status: 200, json: {
+       message: "Your comment has been updated!"
+      }
+    end
   end
 
   def destroy
