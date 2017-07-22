@@ -6,4 +6,9 @@ FactoryGirl.define do
     coloring 'coloring'
     kind 'kind'
   end
+
+  factory :comment do
+    author 'author'
+    comment 'comment'
+  end
 end
