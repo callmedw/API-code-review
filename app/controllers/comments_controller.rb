@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
   def create
     @creature = Creature.find(params[:creature_id])
     if @comment = @creature.comments.create!(comment_params)
-      render status: 200, json: {
+      render status: 201, json: {
        message: "Your comment has been added!"
        }
     end
@@ -29,7 +29,11 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    @comment.destroy
+    if @comment.destroy
+      render status: 200, json: {
+       message: "You've removed that comment!"
+      }
+    end
   end
 
   private

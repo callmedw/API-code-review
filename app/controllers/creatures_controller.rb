@@ -12,7 +12,7 @@ class CreaturesController < ApplicationController
 
   def create
     if @creature = Creature.create!(creature_params)
-      render status: 200, json: {
+      render status: 201, json: {
        message: "Your creature has been added!"
        }
     end
@@ -29,7 +29,12 @@ class CreaturesController < ApplicationController
 
   def destroy
     @creature = Creature.find(params[:id])
-    @creature.destroy
+    if @creature.destroy
+      render status: 200, json: {
+       message: "The creature has been removed!"
+       }
+    end
+
   end
 
   def most_comments
