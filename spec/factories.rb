@@ -1,5 +1,4 @@
 FactoryGirl.define do
-
   factory :creature do
     name 'name'
     age 'age'
@@ -7,5 +6,4 @@ FactoryGirl.define do
     coloring 'coloring'
     kind 'kind'
   end
-
 end
