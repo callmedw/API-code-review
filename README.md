@@ -28,12 +28,13 @@ GET Special Requests:
 * GET localhost:3000//creatures/random
 
 POST Requests:
+<<<<<<< HEAD
 * POST localhost:3000/creatures/?name=TestCreature&age=ageless&gender=NA&coloring=blue&kind=vampire
 * POST localhost:3000/creatures/1/comments/?author=TestAuth&comment=Weird
 
 PATCH Request:
 * PATCH localhost:3000/creatures/1?name=NewName
-* PATCH localhost:3000/creatures/1/comments/1?author=newAutht&comment=newCom
+* PATCH localhost:3000/creatures/1/comments/1?author=newAuth&comment=newCom
 
 PUT Request:
 * PUT localhost:3000/creatures/1?name=NewName
